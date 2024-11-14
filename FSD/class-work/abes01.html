@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let div = document.createElement("div");
+        // div.id = "parents";
+        // div.style.backgroundColor = "lightblue";
+        // div.style.width = "200px";
+        // div.style.height = "200px";
+
+        // let button = document.createElement("button");
+        // button.innertext = "change text";
+        // button.id = "btn";
+
+        // let para = document.createElement("p");
+        // para.innertext = "helloworld";
+        // para.id = "para";
+
+        // div.appendChild(button);
+        // div.appendChild(para);
+        // document.body.appendChild(div);
+
+
+        // document.getElementById("btn").onclick = function () {
+        //     document.getElementById("para").innerText = "Wow";
+        // }
+        // document.getElementById("btn").addEventListener("click", function () {
+        //     document.getElementById("para").innerText = "red";
+        //     document.getElementById("para").style.color = "red";
+        // })
+
+        <div id ="parent">
+            <button id = "btn1">Button</button>
+            <button id = "btn2">Button</button>
+            <p id = "para1">Paragraph 1</p>
+            <p id  = "para2">Paragraph 2</p>
+
+        document.getElementById("parent").addEventListener("click",function(event){
+            if(event.target.tagname === "BUTTON"){
+                alert(event.target.innerHTML + "WAS clicked");
+            }
+            if(event.target.tagname === "p"){
+                event.target.style.color = "blue";
+            }
+        });
+
+
+    </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN</title>
+</head>
+
+<body>
+    <div id="parent"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+    <!-- content delivery network (cdn)-->
+     
+    <script type="text/babel">
+
+        const parent = document.getElementById("parent");
+        const root = ReactDOM.createRoot(parent);
+
+        const h1 = <h1>My shopping </h1>;
+        const item1 = <li>hello</li>;
+        const item2 = <li>hi</li>;
+        const ul = (<ul>(item1)(item2)</ul>);
+        const container = <div>
+
+            {h1}{ul}
+        </div>   
+        parent.render(conatiner);
+
+        
+        
+        
+
+
+
+        // const h1 = React.createElement("h1", {}, "My react heading");
+        // // root.render(h1);
+
+        // const item1 = React.createElement("li",{},"item1");
+        // const item2 = React.createElement("li",{},"item2");
+        // const ul = React.createElement("ul",{},item1,item2);
+        // root.render([h1,ul]);
+
+        // const hi = document.createElement("h1");
+        // h1.textContent = "hello world !";
+        // parent.appendChild(h1);
+        // const ul = document.createElement("ul");
+        // const item1 = document.createElement("li");
+        // item1.textContent = "item1";
+        // const item2 = document.createElement("li");
+        // item2.textContent = "item 2";
+
+    </script>
+</body>
+
+</html>
